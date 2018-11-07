@@ -15,7 +15,12 @@
         }   
         
         public function mostra(){
-            
+            echo "O funcionario do departamento {$this->departamento}, funcionario desde {$this->dataEntrada}, possui salario de {$this->salario} e porta o cpf {$this->cpf}";
+        }
+
+        public function __toString(){  
+            $this->salario = (string)$this->salario;
+            echo "O funcionario do departamento {$this->departamento}, funcionario desde {$this->dataEntrada} e possui salario de ".strval($this->salario);
         }
 
         function __construct($departamento, $salario, $dataEntrada, $cpf){
@@ -26,6 +31,7 @@
             $this->dataEntrada = $dataEntrada;
             $this->cpf = $cpf;
         }
+
     }
 
     #$meuTeste = new Funcionario("caixa",1500,"15/02/2018", "000.000.008-00");

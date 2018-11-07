@@ -15,3 +15,6 @@ $funcionarioPilotoDois->recebeAumento();
 
 $funcionarioPiloto->calculaGanhoAnual();
 $funcionarioPilotoDois->calculaGanhoAnual();
+
+#$funcionarioPiloto->mostra();
+echo $funcionarioPiloto;
