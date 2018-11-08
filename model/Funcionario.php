@@ -1,6 +1,7 @@
 <?php
 
     class Funcionario{
+
         public $departamento;
         public $salario;
         public $dataEntrada;
@@ -11,16 +12,15 @@
         }
 
         public function calculaGanhoAnual(){
-            return "$".$this->salario*13 .".00";
+            return "$".$this->salario*13 ;
         }   
         
         public function mostra(){
-            echo "O funcionario do departamento {$this->departamento}, funcionario desde {$this->dataEntrada}, possui salario de {$this->salario} e porta o cpf {$this->cpf}";
+            return "O funcionario do departamento {$this->departamento}, funcionario desde {$this->dataEntrada}, possui salario de {$this->salario} e porta o cpf {$this->cpf}";
         }
 
-        public function __toString(){  
-            $this->salario = (string)$this->salario;
-            echo "O funcionario do departamento {$this->departamento}, funcionario desde {$this->dataEntrada} e possui salario de ".strval($this->salario);
+        public function __toString(){
+            return $this->mostra();
         }
 
         function __construct($departamento, $salario, $dataEntrada, $cpf){
